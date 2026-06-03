@@ -50,12 +50,12 @@
     <div class="page-content">
       <!-- Duration picker -->
       <div class="section-label">Session duration</div>
-      <div class="duration-row">
-        <button class="dur-btn active" data-mins="45" onclick="setDuration(45)">45 min</button>
-        <button class="dur-btn" data-mins="60" onclick="setDuration(60)">1 hour</button>
-        <button class="dur-btn" data-mins="75" onclick="setDuration(75)">1h 15m</button>
-        <button class="dur-btn" data-mins="90" onclick="setDuration(90)">1h 30m</button>
-      </div>
+      <div class="duration-row" id="durRow">
+  <button class="dur-btn active" onclick="window.setDuration(45)">45 min</button>
+  <button class="dur-btn" onclick="window.setDuration(60)">1 hour</button>
+  <button class="dur-btn" onclick="window.setDuration(75)">1h 15m</button>
+  <button class="dur-btn" onclick="window.setDuration(90)">1h 30m</button>
+</div>
 
       <!-- Day selector -->
       <div class="section-label" style="margin-top:1.25rem">Select day</div>
