@@ -1,5 +1,5 @@
-const CACHE = 'ironlog-v1';
-const ASSETS = ['/', '/index.html', '/style.css', '/app.js', '/manifest.json'];
+const CACHE = 'ironlog-v2';
+const ASSETS = ['/ironlog/', '/ironlog/index.html', '/ironlog/style.css', '/ironlog/app.js', '/ironlog/manifest.json'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
@@ -15,6 +15,6 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   e.respondWith(
-    caches.match(e.request).then(cached => cached || fetch(e.request).catch(() => cached))
+    caches.match(e.request).then(cached => cached || fetch(e.request))
   );
 });
